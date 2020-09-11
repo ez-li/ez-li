@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+#sky {
+    margin: 15% 0 0 15%;
+    width: 400px;
+    height: 00px;
+}
+
+.rain {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    animation: make-rain 1s ease-in-out 0s infinite;
+    /* -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out; */
+    /* animation-iteration-count: 3; */
+}
+
+.animationEnd {
+    opacity: 0;
+  }
+
+@keyframes make-rain {
+    0% { font-size: 10px; top: 15%; opacity: 0%; }
+    15% { opacity: 30%; }
+    100% { font-size: 30px; top: 85%; opacity: 0%;}
+    /* 100% {
+        overflow: hidden;
+        opacity: 5%;
+        display: none;
+        visibility: hidden;
+      } */
+  }
