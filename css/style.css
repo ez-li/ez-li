@@ -4,19 +4,26 @@ body {
 
 #sky {
     margin: 15% 0 0 15%;
-    width: 400px;
-    height: 00px;
+    width: 420px;
+    /* height: 00px; */
 }
 
 .rain {
     font-size: 30px;
     color: white;
     position: absolute;
-    animation: make-rain 1s ease-in-out 0s infinite;
+    animation: make-rain 1s ease-in-out; /*infinite;*/
     /* -webkit-transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out; */
-    /* animation-iteration-count: 3; */
+    animation-iteration-count: 10;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
 
 .animationEnd {
@@ -24,13 +31,71 @@ body {
   }
 
 @keyframes make-rain {
-    0% { font-size: 10px; top: 15%; opacity: 0%; }
-    15% { opacity: 30%; }
-    100% { font-size: 30px; top: 85%; opacity: 0%;}
-    /* 100% {
-        overflow: hidden;
-        opacity: 5%;
-        display: none;
-        visibility: hidden;
-      } */
+    0% { visibility: visible; font-size: 10px; top: 15%; opacity: 0%; }
+    15% { opacity: 50%; }
+    100% { visibility: hidden; font-size: 30px; top: 85%; opacity: 0%;}
   }
+
+#bio {
+    color: white;
+    text-align: justify;
+    word-spacing: 2.5px;
+    animation: fadeIn ease 10s;
+    animation-iteration-count: 1;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+@keyframes fadeIn { 
+    0% { 
+        visibility: hidden; opacity: 0; 
+    } 
+    33% {
+        visibility: visible; opacity: 0; 
+    }
+    100% { 
+        visibility: visible; opacity: 1; 
+     } 
+} 
+
+.gallery {
+    overflow: hidden;
+    margin-left: 50%;
+    height: 100%;
+    width: 50%;
+}
+
+img {
+    opacity: 0%;
+}
+img:hover {
+    opacity: 100%;
+}
+
+#reflections {
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    margin-left: 60%;
+    /* top: 40%; */
+}
+
+#window {
+    max-width: 250px;
+    height: auto;
+    position: absolute;
+    margin-left: 60%;
+    top: 10%;
+}
+
+#scars {
+    max-width: 250px;
+    height: auto;
+    position: absolute;
+    margin-left: 60%;
+    top: 60%;
+}
