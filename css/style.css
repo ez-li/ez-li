@@ -9,11 +9,12 @@ body::-webkit-scrollbar {
 a {
     color: white;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #sky {
     margin: 15% 0 0 15%;
-    width: 30%;
+    width: 40%;
 }
 
 #bio {
@@ -22,15 +23,21 @@ a {
     word-spacing: 2.5px;
     animation: fadeIn ease 10s;
     animation-iteration-count: 1;
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none; 
     user-select: none;
 }
 #quote {
+    width: 79px;
+    font-size: 12px;
+    letter-spacing: 4px; 
+    font-style: italic;
     color: white;
+    position: absolute;
+    user-select: none;
+    margin-top: 100px;
+    left: 100px;
+}
+#q2 {
+    width: 115px;
 }
 
 @keyframes fadeIn { 
@@ -50,9 +57,9 @@ a {
 
 .gallery {
     margin: 2% 0;
-    margin-left: 20%;
+    margin-left: 30%;
     overflow-y: scroll;
-    width: 40%;
+    width: 60%;
     height: 90vh;    
     display: flex;
     flex-direction: row;
@@ -64,7 +71,7 @@ a {
 }
 
 img {
-    /* opacity: 0%; */
+    opacity: 0%;
     margin-top: 80px;
     margin-right: 80px;
     user-select: none;
@@ -90,7 +97,7 @@ img:hover {
     height: auto;
 }
 #falls {
-    max-width: 400px;
+    max-width: 380px;
     height: auto;
     margin-bottom: 100px;
 }
